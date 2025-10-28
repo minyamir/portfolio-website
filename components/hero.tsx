@@ -114,7 +114,7 @@ export function Hero() {
                 <Mail className="w-4 h-4 mr-2" />
                 Contact me
               </Button>
-           <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+           <a href="https://github.com/minyamir" target="_blank" rel="noopener noreferrer">
   <Button
     variant="outline"
     size="lg"
