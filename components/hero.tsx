@@ -125,14 +125,21 @@ export function Hero() {
   </Button>
 </a>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="hover:scale-105 transition-all duration-300 hover:shadow-lg bg-transparent hover:bg-primary/5"
-              >
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn
-              </Button>
+          <a
+  href="https://www.linkedin.com/in/minyamir-kelemu-a888b4374/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="outline"
+    size="lg"
+    className="hover:scale-105 transition-all duration-300 hover:shadow-lg bg-transparent hover:bg-primary/5"
+  >
+    <Linkedin className="w-4 h-4 mr-2" />
+    LinkedIn
+  </Button>
+</a>
+
               <Button
                 variant="outline"
                 size="lg"
