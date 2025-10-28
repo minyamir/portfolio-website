@@ -114,14 +114,17 @@ export function Hero() {
                 <Mail className="w-4 h-4 mr-2" />
                 Contact me
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="hover:scale-105 transition-all duration-300 hover:shadow-lg bg-transparent hover:bg-gold/10 border-gold/30 hover:border-gold/50 text-gold hover:text-gold"
-              >
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
+           <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+  <Button
+    variant="outline"
+    size="lg"
+    className="hover:scale-105 transition-all duration-300 hover:shadow-lg bg-transparent hover:bg-gold/10 border-gold/30 hover:border-gold/50 text-gold hover:text-gold"
+  >
+    <Github className="w-4 h-4 mr-2" />
+    GitHub
+  </Button>
+</a>
+
               <Button
                 variant="outline"
                 size="lg"
