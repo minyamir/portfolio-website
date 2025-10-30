@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
-// ✅ Website metadata configuration
+// ✅ Website metadata including favicon
 export const metadata: Metadata = {
   title: "Minyamir Kelemu - Fullstack Developer",
   description:
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     ],
     apple: "/me.png",
   },
+  themeColor: "#0f172a",
 }
 
-// ✅ Root layout component
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,10 +34,7 @@ export default function RootLayout({
       <body
         className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased bg-white text-black dark:bg-gray-950 dark:text-white transition-colors duration-300`}
       >
-        {/* Suspense ensures smooth client loading */}
         <Suspense fallback={null}>{children}</Suspense>
-
-        {/* Vercel Analytics */}
         <Analytics />
       </body>
     </html>
