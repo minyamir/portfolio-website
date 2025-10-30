@@ -8,8 +8,14 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Minyamir Kelemu - Fullstack Developer",
-  description: "Software Engineer and Fullstack Developer specializing in modern web applications and scalable systems",
+  description:
+    "Software Engineer and Fullstack Developer specializing in modern web applications and scalable systems",
   generator: "v0.app",
+  themeColor: "#0f172a",
+  icons: {
+    icon: "/me.png",        // Favicon
+    apple: "/me.png",       // Apple touch icon
+  },
 }
 
 export default function RootLayout({
@@ -19,11 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}
+      >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
     </html>
   )
 }
-
