@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Minyamir Kelemu - Fullstack Developer",
   description: "Software Engineer and Fullstack Developer specializing in modern web applications and scalable systems",
-  generator: "v0.app",
+
 }
 
 export default function RootLayout({
