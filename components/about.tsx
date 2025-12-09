@@ -8,7 +8,6 @@ export function About() {
 
   useEffect(() => {
     setMounted(true)
-    // Start typing animation after component mounts
     const timer = setTimeout(() => {
       setTypingComplete(true)
     }, 2000)
@@ -48,11 +47,11 @@ export function About() {
 
           {/* Main Content */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-            {/* Photo */}
+            {/* Big Animated Photo */}
             <div
-              className={`w-48 h-48 rounded-full overflow-hidden border-4 border-primary shadow-lg flex-shrink-0 transition-all duration-700 ${
+              className={`w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg flex-shrink-0 transition-all duration-700 ${
                 mounted ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-              }`}
+              } motion-safe:animate-bounce`}
             >
               <img
                 src="/mini.jpg"
@@ -112,10 +111,10 @@ export function About() {
                     key={index}
                     className="text-center p-4 rounded-lg bg-card/50 hover:bg-card/80 transition-all duration-300 hover:scale-105 group"
                   >
-                    <div className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-2xl md:text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
                   </div>
                 ))}
               </div>
