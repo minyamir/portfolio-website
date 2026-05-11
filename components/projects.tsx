@@ -20,7 +20,7 @@ const projects = [
     description:
       "A secure, moderated social networking environment designed for children. Implements strict authentication protocols, age-appropriate UI/UX, and real-time interaction features with a focus on safety.",
     technologies: ["React", "Node.js", "Firebase", "Express.js", "Socket.io"],
-    github: "#",
+    github: "https://github.com/minyamir/Kids_Scoial_Media-Frontend",
     demo: "https://kids-scoial-media.vercel.app/",
   },
 {
