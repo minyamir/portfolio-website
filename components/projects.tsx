@@ -40,7 +40,7 @@ const projects = [
 
   demo: "https://hahusecondhandmarket-backend.onrender.com",
 
-}
+},{
   title: "ETHIO-Kids: AI-Powered Educational Backend",
   description:
     "An advanced C2C educational ecosystem featuring an 'AI Gatekeeper' for automated content moderation and 'The Live Stadium' for real-time collaboration. Engineered to filter 'low-value' content and promote Educational Patriotism through secure, real-time media processing.",
@@ -51,10 +51,9 @@ const projects = [
     "Google Gemini AI", 
     "WebRTC", 
     "Socket.io", 
-    "Cloudinary"
-  ],
-  github: "https://github.com/minyamir/Kids_Social_Media-Backend", 
-  demo: "https://kids-social-media-backend.onrender.com", // Ensure this points to your deployed backend/docs
+    "Cloudinary"],
+    github: "https://github.com/minyamir/Kids_Social_Media-Backend", 
+    demo: "https://kids-social-media-backend.onrender.com", // Ensure this points to your deployed backend/docs
 },
 ]
 
