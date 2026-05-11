@@ -9,7 +9,7 @@ export function Hero() {
   const [mounted, setMounted] = useState(false)
   const [typedText, setTypedText] = useState("")
   const [currentTech, setCurrentTech] = useState(0)
-  const fullText = "Backend Developer with Frontend Knowledge"
+  const fullText = "MERN stuck"
 
   const technologies = ["React", "Express", "Tailwind", "Node.js", "JavaScript", "CSS3", "HTML5"]
 
