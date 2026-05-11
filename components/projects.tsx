@@ -12,8 +12,8 @@ const projects = [
     description:
       "A specialized marketplace platform allowing farmers to rent and lease agricultural machinery. Features include a bilingual interface (Amharic/English), equipment listing management, and a localized booking system.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
-    github: "#", // Replace with your actual link
-    demo: "#",
+    github: "https://github.com/minyamir/Farmer_tools_rent", 
+    demo: "https://farmer-tools-rent-frem.vercel.app/",
   },
   {
     title: "KidSocialMedia",
@@ -23,23 +23,24 @@ const projects = [
     github: "https://github.com/minyamir/Kids_Scoial_Media-Frontend",
     demo: "https://kids-scoial-media.vercel.app/",
   },
-{
-  title: "OrthodoxAdmin",
-  description:
-    "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
-  technologies: ["React", "tailwindcss"],
-  github: "#",
-  demo: "#",
-},
+  {
+    title: "Orthodox_platform",
+    description:
+      "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
+    technologies: ["React", "tailwindcss"],
+    github: "https://github.com/minyamir/orthodox-student-platform/deployments",
+    demo: "https://minyamir.github.io/orthodox-student-platform/",
+  },
   {
     title: "Farmer Assist AI",
     description:
       "A multimodal assistant for farmers featuring speech-to-text and text-to-speech in Amharic, Afan Oromo, and English. Designed to provide agricultural advice through voice commands.",
     technologies: ["Node", "Express", "Speech Recognition", "MERN"],
-    github: "",
+    github: "#",
     demo: "#",
   },
 ]
+
 export function Projects() {
   const [visibleCards, setVisibleCards] = useState<boolean[]>(new Array(projects.length).fill(false))
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -78,8 +79,7 @@ export function Projects() {
             <h2 className="text-3xl font-bold">Projects</h2>
             <div className="w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-gradient-x"></div>
             <p className="text-muted-foreground max-w-2xl">
-              Here are some of the backend systems and APIs I've built. Each project showcases different aspects of
-              scalable architecture and system design.
+              I specialize in building full-stack applications with the MERN stack. Here are some of the systems I've developed.
             </p>
           </div>
 
@@ -93,8 +93,7 @@ export function Projects() {
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <Card className="bg-card border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 group relative overflow-hidden">
-                  {/* Animated background gradient on hover */}
+                <Card className="bg-card border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 group relative overflow-hidden h-full flex flex-col">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <CardHeader className="relative z-10">
@@ -106,7 +105,7 @@ export function Projects() {
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="space-y-4 relative z-10">
+                  <CardContent className="space-y-4 relative z-10 mt-auto">
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge
@@ -122,23 +121,42 @@ export function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex gap-3">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-105 bg-transparent"
+                    <div className="flex gap-3 pt-2">
+                      {/* GitHub Link */}
+                      <a
+                        href={project.github !== "#" && project.github !== "" ? project.github : undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={project.github === "#" || project.github === "" ? "cursor-not-allowed" : ""}
                       >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 hover:scale-105 bg-transparent"
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={project.github === "#" || project.github === ""}
+                          className="hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 bg-transparent"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      </a>
+
+                      {/* Demo Link */}
+                      <a
+                        href={project.demo !== "#" && project.demo !== "" ? project.demo : undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={project.demo === "#" || project.demo === "" ? "cursor-not-allowed" : ""}
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={project.demo === "#" || project.demo === ""}
+                          className="hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 bg-transparent"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Demo
+                        </Button>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
