@@ -9,9 +9,9 @@ export function Hero() {
   const [mounted, setMounted] = useState(false)
   const [typedText, setTypedText] = useState("")
   const [currentTech, setCurrentTech] = useState(0)
-  const fullText = "Frontend Developer with Backend Knowledge"
+  const fullText = "Backend Developer with Frontend Knowledge"
 
-  const technologies = ["React", "Next.js", "TypeScript", "Tailwind", "Node.js", "JavaScript", "CSS3", "HTML5"]
+  const technologies = ["React", "Express", "Tailwind", "Node.js", "JavaScript", "CSS3", "HTML5"]
 
   useEffect(() => {
     setMounted(true)
