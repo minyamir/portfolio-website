@@ -5,31 +5,30 @@ import { useEffect, useRef, useState } from "react"
 
 const experiences = [
   {
-    period: "2023 — Present",
-    title: "Senior Backend Developer",
-    company: "TechCorp Solutions",
+    period: "2026 — Present",
+    title: "Full-Stack Developer",
+    company: "Farmer Rent Tool",
     description:
-      "Lead backend development for high-traffic applications serving 2M+ users. Architected microservices infrastructure, optimized database queries reducing response time by 60%, and implemented CI/CD pipelines.",
-    technologies: ["Node.js", "Python", "PostgreSQL", "Redis", "Docker", "AWS"],
+      "Developed a specialized marketplace for agricultural equipment rental. Built a bilingual interface supporting Amharic and English, allowing farmers to list and rent machinery while optimizing local resource sharing.",
+    technologies: ["MERN Stack", "Node.js", "MongoDB", "Tailwind CSS"],
   },
   {
-    period: "2021 — 2023",
-    title: "Backend Developer",
-    company: "StartupXYZ",
+    period: "2025 — 2026",
+    title: "Lead Developer",
+    company: "KidSocialMedia",
     description:
-      "Built scalable REST APIs and GraphQL endpoints. Designed database schemas, implemented authentication systems, and integrated third-party services. Collaborated with frontend teams to deliver seamless user experiences.",
-    technologies: ["Express.js", "MongoDB", "GraphQL", "JWT", "Stripe API"],
+      "Architected a secure, moderated social networking platform designed specifically for children. Implemented strict role-based access controls, content filtering, and an intuitive UI/UX to ensure a safe digital environment.",
+    technologies: ["React", "Express.js", "Firebase", "Node.js"],
   },
   {
-    period: "2020 — 2021",
-    title: "Junior Software Engineer",
-    company: "DevStudio Inc",
+    period: "2025",
+    title: "Backend & Systems Lead",
+    company: "OrthodoxAdmin",
     description:
-      "Developed and maintained web applications, wrote comprehensive tests, and participated in code reviews. Gained experience in agile development practices and version control workflows.",
-    technologies: ["JavaScript", "Python", "MySQL", "Git", "Jest"],
+      "Designed and implemented an administrative management system for religious institutional records. Developed features for membership tracking, event scheduling, and secure data storage using a structured database approach.",
+    technologies: ["Java", "JDBC", "SQL Server", "Swing/React"],
   },
 ]
-
 export function Experience() {
   const [visibleExperiences, setVisibleExperiences] = useState<boolean[]>(new Array(experiences.length).fill(false))
   const experienceRefs = useRef<(HTMLDivElement | null)[]>([])
