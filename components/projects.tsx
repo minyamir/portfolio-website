@@ -13,7 +13,7 @@ const projects = [
       "A specialized marketplace platform allowing farmers to rent and lease agricultural machinery. Features include a bilingual interface (Amharic/English), equipment listing management, and a localized booking system.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     github: "#", // Replace with your actual link
-    demo: "https://kids-scoial-media.vercel.app/",
+    demo: "#",
   },
   {
     title: "KidSocialMedia",
@@ -21,7 +21,7 @@ const projects = [
       "A secure, moderated social networking environment designed for children. Implements strict authentication protocols, age-appropriate UI/UX, and real-time interaction features with a focus on safety.",
     technologies: ["React", "Node.js", "Firebase", "Express.js", "Socket.io"],
     github: "#",
-    demo: "#",
+    demo: "https://kids-scoial-media.vercel.app/",
   },
   {
     title: "OrthodoxAdmin",
