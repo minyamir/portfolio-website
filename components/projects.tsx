@@ -8,39 +8,38 @@ import { useEffect, useRef, useState } from "react"
 
 const projects = [
   {
-    title: "E-commerce API Platform",
+    title: "Farmer Rent Tool",
     description:
-      "Scalable microservices architecture for e-commerce platform handling 100k+ daily transactions. Built with Node.js, PostgreSQL, and Redis for caching.",
-    technologies: ["Node.js", "PostgreSQL", "Redis", "Docker", "AWS"],
+      "A specialized marketplace platform allowing farmers to rent and lease agricultural machinery. Features include a bilingual interface (Amharic/English), equipment listing management, and a localized booking system.",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
+    github: "#", // Replace with your actual link
+    demo: "#",
+  },
+  {
+    title: "KidSocialMedia",
+    description:
+      "A secure, moderated social networking environment designed for children. Implements strict authentication protocols, age-appropriate UI/UX, and real-time interaction features with a focus on safety.",
+    technologies: ["React", "Node.js", "Firebase", "Express.js", "Socket.io"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Real-time Chat System",
+    title: "OrthodoxAdmin",
     description:
-      "High-performance chat application with WebSocket connections, message queuing, and horizontal scaling. Supports 10k+ concurrent users.",
-    technologies: ["Python", "FastAPI", "WebSocket", "RabbitMQ", "MongoDB"],
+      "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
+    technologies: ["React","tailwindcss],
     github: "#",
     demo: "#",
   },
   {
-    title: "Analytics Dashboard API",
+    title: "Farmer Assist AI",
     description:
-      "RESTful API for analytics dashboard with complex data aggregation, real-time metrics, and automated reporting features.",
-    technologies: ["Express.js", "TimescaleDB", "GraphQL", "Bull Queue"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Authentication Service",
-    description:
-      "Secure authentication microservice with JWT tokens, OAuth integration, rate limiting, and comprehensive audit logging.",
-    technologies: ["Go", "PostgreSQL", "JWT", "OAuth2", "Docker"],
-    github: "#",
+      "A multimodal assistant for farmers featuring speech-to-text and text-to-speech in Amharic, Afan Oromo, and English. Designed to provide agricultural advice through voice commands.",
+    technologies: ["Node", "Express", "Speech Recognition", "MERN"],
+    github: "",
     demo: "#",
   },
 ]
-
 export function Projects() {
   const [visibleCards, setVisibleCards] = useState<boolean[]>(new Array(projects.length).fill(false))
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
