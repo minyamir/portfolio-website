@@ -26,22 +26,36 @@ const projects = [
     demo: "https://farmer-tools-rent-frem.vercel.app/",
   },
  
-  {
-    title: "Orthodox_platform",
-    description:
-      "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
-    technologies: ["React", "tailwindcss"],
-    github: "https://github.com/minyamir/orthodox-student-platform/deployments",
-    demo: "https://minyamir.github.io/orthodox-student-platform/",
-  },
-  {
-    title: "Farmer Assist AI",
-    description:
-      "A multimodal assistant for farmers featuring speech-to-text and text-to-speech in Amharic, Afan Oromo, and English. Designed to provide agricultural advice through voice commands.",
-    technologies: ["Node", "Express", "Speech Recognition", "MERN"],
-    github: "#",
-    demo: "#",
-  },
+{
+
+  title: "Secure C2C SecondHand Marketplace Backend",
+
+  description:
+
+    "A verified Customer-to-Customer (C2C) marketplace engine featuring National ID verification for enhanced user trust. This backend powers real-time second-hand product listings, category-based filtering, and a secure negotiation system, ensuring a safe trading environment for pre-owned materials.",
+
+  technologies: ["MongoDB", "Express.js", "Node.js", "Cloudinary", "JWT"],
+
+  github: "https://github.com/minyamir/Hahu_SecondHand_Marketplace_Backend",
+
+  demo: "https://hahusecondhandmarket-backend.onrender.com",
+
+}
+  title: "ETHIO-Kids: AI-Powered Educational Backend",
+  description:
+    "An advanced C2C educational ecosystem featuring an 'AI Gatekeeper' for automated content moderation and 'The Live Stadium' for real-time collaboration. Engineered to filter 'low-value' content and promote Educational Patriotism through secure, real-time media processing.",
+  technologies: [
+    "Node.js", 
+    "Express.js", 
+    "MongoDB", 
+    "Google Gemini AI", 
+    "WebRTC", 
+    "Socket.io", 
+    "Cloudinary"
+  ],
+  github: "https://github.com/minyamir/Kids_Social_Media-Backend", 
+  demo: "https://kids-social-media-backend.onrender.com", // Ensure this points to your deployed backend/docs
+},
 ]
 
 export function Projects() {
