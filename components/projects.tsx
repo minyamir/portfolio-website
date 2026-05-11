@@ -7,6 +7,16 @@ import { ExternalLink, Github } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const projects = [
+
+ {
+    title: "KidSocialMedia",
+    description:
+      "A secure, moderated social networking environment designed for children. Implements strict authentication protocols, age-appropriate UI/UX, and real-time interaction features with a focus on safety.",
+    technologies: ["React", "Node.js", "Firebase", "Express.js", "Socket.io"],
+    github: "https://github.com/minyamir/Kids_Scoial_Media-Frontend",
+    demo: "https://kids-scoial-media.vercel.app/",
+  },
+  
   {
     title: "Farmer Rent Tool",
     description:
@@ -15,14 +25,7 @@ const projects = [
     github: "https://github.com/minyamir/Farmer_tools_rent", 
     demo: "https://farmer-tools-rent-frem.vercel.app/",
   },
-  {
-    title: "KidSocialMedia",
-    description:
-      "A secure, moderated social networking environment designed for children. Implements strict authentication protocols, age-appropriate UI/UX, and real-time interaction features with a focus on safety.",
-    technologies: ["React", "Node.js", "Firebase", "Express.js", "Socket.io"],
-    github: "https://github.com/minyamir/Kids_Scoial_Media-Frontend",
-    demo: "https://kids-scoial-media.vercel.app/",
-  },
+ 
   {
     title: "Orthodox_platform",
     description:
