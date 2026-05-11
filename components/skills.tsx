@@ -5,40 +5,39 @@ import { useEffect, useRef, useState } from "react"
 
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript", "HTML5", "CSS3", "Framer Motion"],
+    title: "MERN Stack Core",
+    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Mongoose", "REST APIs"],
+    icon: "💎",
+  },
+  {
+    title: "Real-Time & AI",
+    skills: ["Socket.io", "WebRTC", "Google Gemini AI", "Full-Mesh Network", "Signal Processing"],
+    icon: "🚀",
+  },
+  {
+    title: "Frontend Engineering",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"],
     icon: "🎨",
   },
   {
-    title: "UI/UX & Design",
-    skills: ["Responsive Design", "Component Libraries", "Figma", "Adobe XD", "Accessibility", "Performance"],
-    icon: "✨",
+    title: "Backend & Security",
+    skills: ["JWT Auth", "Bcrypt", "Validation (Zod/Joi)", "National ID Integration", "Middleware"],
+    icon: "🛡️",
   },
   {
-    title: "Backend Knowledge",
-    skills: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Authentication", "Database Design"],
-    icon: "⚡",
-  },
-  {
-    title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"],
-    icon: "💻",
-  },
-  {
-    title: "Tools & Workflow",
-    skills: ["Git", "VS Code", "Webpack", "Vite", "npm/yarn", "Chrome DevTools"],
-    icon: "🛠️",
-  },
-  {
-    title: "Cloud & Deployment",
-    skills: ["Vercel", "Netlify", "AWS", "Docker", "CI/CD", "GitHub Actions"],
+    title: "Database & Cloud",
+    skills: ["MySQL", "PostgreSQL", "Cloudinary", "Multer", "Vercel", "Render"],
     icon: "☁️",
+  },
+  {
+    title: "Development Tools",
+    skills: ["Git", "Postman", "Docker", "pnpm/npm", "Linux Bash", "Windows 11 Dev"],
+    icon: "🛠️",
   },
 ]
 
 export function Skills() {
   const [visibleCategories, setVisibleCategories] = useState<boolean[]>(new Array(skillCategories.length).fill(false))
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
   const categoryRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
@@ -57,7 +56,7 @@ export function Skills() {
           }
         })
       },
-      { threshold: 0.2 },
+      { threshold: 0.1 },
     )
 
     categoryRefs.current.forEach((ref) => {
@@ -68,66 +67,51 @@ export function Skills() {
   }, [])
 
   return (
-    <section id="skills" className="py-20 px-6 bg-card/30 relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
-        <div className="absolute top-60 left-80 w-1 h-1 bg-accent/60 rounded-full animate-float delay-1000"></div>
-        <div className="absolute top-40 right-60 w-3 h-3 bg-primary/30 rounded-full animate-wave delay-500"></div>
-        <div className="absolute bottom-20 right-20 w-2 h-2 bg-accent/50 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-60 left-40 w-1 h-1 bg-primary/50 rounded-full animate-float delay-1500"></div>
+    <section id="skills" className="py-20 px-6 bg-background relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-1/4 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-1/4 right-10 w-72 h-72 bg-blue-600/20 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
-        <div className="space-y-12">
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="space-y-16">
           <div className="space-y-4 text-center">
-            <h2 className="text-3xl font-bold animate-slide-in-up">
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x bg-300%">
-                Skills & Technologies
+            <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
+              <span className="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+                Technical Arsenal
               </span>
             </h2>
-            <div className="w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-gradient-x mx-auto"></div>
-            <p className="text-muted-foreground animate-slide-in-up delay-200">
-              Frontend technologies I specialize in, with backend knowledge to build complete solutions.
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Specialized in the <strong>MERN stack</strong> for building secure marketplaces, 
+              educational platforms, and real-time AI-integrated systems.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
               <div
                 key={index}
                 ref={(el) => (categoryRefs.current[index] = el)}
-                className={`space-y-4 transition-all duration-700 hover-lift group ${
-                  visibleCategories[index] ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                className={`p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/40 transition-all duration-500 group ${
+                  visibleCategories[index] ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center space-x-3 p-4 rounded-lg bg-card/50 border border-border/50 group-hover:border-primary/30 transition-all duration-300">
-                  <span className="text-2xl animate-wave" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="flex items-center space-x-3 mb-6">
+                  <span className="text-2xl group-hover:scale-125 transition-transform duration-300">
                     {category.icon}
                   </span>
-                  <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    {category.title}
-                  </h3>
+                  <h3 className="text-xl font-bold tracking-tight">{category.title}</h3>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
+                  {category.skills.map((skill) => (
                     <Badge
                       key={skill}
-                      variant="outline"
-                      onMouseEnter={() => setHoveredSkill(skill)}
-                      onMouseLeave={() => setHoveredSkill(null)}
-                      className={`bg-background/50 hover:bg-primary/10 hover:border-primary/50 hover:scale-105 hover:shadow-md transition-all duration-300 cursor-default relative overflow-hidden group ${
-                        visibleCategories[index]
-                          ? "translate-y-0 opacity-100 animate-bounce-in"
-                          : "translate-y-4 opacity-0"
-                      }`}
-                      style={{
-                        transitionDelay: `${index * 200 + skillIndex * 100}ms`,
-                        animationDelay: `${skillIndex * 100}ms`,
-                      }}
+                      variant="secondary"
+                      className="bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-default py-1 px-3"
                     >
-                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
                       {skill}
                     </Badge>
                   ))}
@@ -136,30 +120,29 @@ export function Skills() {
             ))}
           </div>
 
-          <div className="mt-16 p-6 rounded-xl bg-card/50 border border-border/50">
-            <h3 className="text-xl font-semibold mb-6 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Core Expertise
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
+          {/* Proficiency Bars */}
+          <div className="mt-20 p-8 rounded-3xl bg-card/30 border border-border/50 backdrop-blur-sm">
+            <h3 className="text-2xl font-bold mb-10 text-center">Core Proficiency</h3>
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
               {[
-                { skill: "Frontend Development", level: 95 },
-                { skill: "React & Next.js", level: 92 },
-                { skill: "UI/UX Implementation", level: 90 },
-                { skill: "Responsive Design", level: 88 },
-                { skill: "Backend Integration", level: 85 },
-                { skill: "Performance Optimization", level: 87 },
+                { skill: "MERN Stack Architecture", level: 95 },
+                { skill: "Real-time Systems (WebRTC/Sockets)", level: 88 },
+                { skill: "API Security & Auth", level: 92 },
+                { skill: "UI/UX & Tailwind CSS", level: 94 },
+                { skill: "Database Optimization", level: 85 },
+                { skill: "AI Integration (Gemini/GPT)", level: 80 },
               ].map((item, index) => (
-                <div key={item.skill} className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="font-medium">{item.skill}</span>
-                    <span className="text-muted-foreground">{item.level}%</span>
+                <div key={item.skill} className="space-y-3">
+                  <div className="flex justify-between items-end">
+                    <span className="font-semibold text-foreground">{item.skill}</span>
+                    <span className="text-sm text-primary font-mono">{item.level}%</span>
                   </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div className="h-3 bg-muted rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out animate-shimmer"
+                      className="h-full bg-gradient-to-r from-primary via-blue-500 to-primary rounded-full transition-all duration-[1500ms] ease-in-out"
                       style={{
                         width: visibleCategories[0] ? `${item.level}%` : "0%",
-                        transitionDelay: `${index * 200}ms`,
+                        transitionDelay: `${index * 150}ms`,
                       }}
                     ></div>
                   </div>
