@@ -44,7 +44,7 @@ export function About() {
 
               <p className={`transition-all duration-700 delay-500 ${mounted ? "opacity-100" : "opacity-0"}`}>
                 Currently, I am developing impactful tools like <strong>Secure C2C SecondHandmarketplace </strong>, 
-                <strong>KidSocialMedia</strong>, and <strong>Farmer Rent tool</strong>,<strong>Farmer Rent tool</strong. I enjoy turning 
+                <strong>KidSocialMedia</strong>, and <strong>Farmer Rent tool</strong>,<strong>Backend of Ethio Kids </strong. I enjoy turning 
                 complex requirements into simple, functional, and user-friendly applications.
               </p>
             </div>
