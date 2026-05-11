@@ -13,7 +13,7 @@ const projects = [
       "A specialized marketplace platform allowing farmers to rent and lease agricultural machinery. Features include a bilingual interface (Amharic/English), equipment listing management, and a localized booking system.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     github: "#", // Replace with your actual link
-    demo: "#",
+    demo: "https://kids-scoial-media.vercel.app/",
   },
   {
     title: "KidSocialMedia",
