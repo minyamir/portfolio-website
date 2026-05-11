@@ -23,14 +23,14 @@ const projects = [
     github: "#",
     demo: "https://kids-scoial-media.vercel.app/",
   },
-  {
-    title: "OrthodoxAdmin",
-    description:
-      "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
-    technologies: ["React","tailwindcss],
-    github: "#",
-    demo: "#",
-  },
+{
+  title: "OrthodoxAdmin",
+  description:
+    "An institutional management system for religious administration. Streamlines membership records, event scheduling, and financial tracking with a secure backend and structured reporting.",
+  technologies: ["React", "tailwindcss"],
+  github: "#",
+  demo: "#",
+},
   {
     title: "Farmer Assist AI",
     description:
