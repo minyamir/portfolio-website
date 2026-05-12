@@ -21,7 +21,7 @@ const experiences = [
     technologies: ["Node.js", "Express.js", "WebRTC", "Socket.io", "Cloudinary"],
   },
   {
-    period: "2025",
+    period: "2025-2026",
     title: "Full-Stack Developer & Creator",
     company: "Farmer Rent Tool",
     description:
