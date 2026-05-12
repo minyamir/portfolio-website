@@ -133,7 +133,7 @@ export function Contact() {
               size="lg"
               className="rounded-full hover:bg-blue-600/10 transition-all px-8"
             >
-              <a href="#" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/minyamir-kelemu-a888b4374/" target="_blank" rel="noreferrer">
                 <Linkedin className="w-5 h-5 mr-2" />
                 LinkedIn
               </a>
