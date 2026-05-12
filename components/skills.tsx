@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 const skillCategories = [
   {
     title: "MERN Stack Core",
-    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Mongoose", "REST APIs"],
+    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Mongoose"],
     icon: "💎",
   },
   {
@@ -16,22 +16,22 @@ const skillCategories = [
   },
   {
     title: "Frontend Engineering",
-    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"],
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React"],
     icon: "🎨",
   },
   {
     title: "Backend & Security",
-    skills: ["JWT Auth", "Bcrypt", "Validation (Zod/Joi)", "National ID Integration", "Middleware"],
+    skills: ["JWT Auth", "Bcrypt", "Validation", "Middleware"],
     icon: "🛡️",
   },
   {
     title: "Database & Cloud",
-    skills: ["MySQL", "PostgreSQL", "Cloudinary", "Multer", "Vercel", "Render"],
+    skills: ["MySQL", "MongoDB", "Cloudinary", "Multer", "Vercel", "Render"],
     icon: "☁️",
   },
   {
     title: "Development Tools",
-    skills: ["Git", "Postman", "Docker", "pnpm/npm", "Linux Bash", "Windows 11 Dev"],
+    skills: ["Git", "Postman", "Docker", "Windows 11 Dev"],
     icon: "🛠️",
   },
 ]
