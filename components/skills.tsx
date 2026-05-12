@@ -79,7 +79,7 @@ export function Skills() {
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
               <span className="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-                Technical Arsenal
+                Technical Stack tools
               </span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
