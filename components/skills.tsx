@@ -125,12 +125,12 @@ export function Skills() {
             <h3 className="text-2xl font-bold mb-10 text-center">Core Proficiency</h3>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
               {[
-                { skill: "MERN Stack Architecture", level: 95 },
-                { skill: "Real-time Systems (WebRTC/Sockets)", level: 88 },
-                { skill: "API Security & Auth", level: 92 },
-                { skill: "UI/UX & Tailwind CSS", level: 94 },
-                { skill: "Database Optimization", level: 85 },
-                { skill: "AI Integration (Gemini/GPT)", level: 80 },
+                { skill: "MERN Stack Architecture"},
+                { skill: "Real-time Systems (WebRTC/Sockets)"},
+                { skill: "API Security & Auth"},
+                { skill: "UI/UX & Tailwind CSS"},
+                { skill: "Database Optimization" },
+                { skill: "AI Integration (Gemini/GPT)" },
               ].map((item, index) => (
                 <div key={item.skill} className="space-y-3">
                   <div className="flex justify-between items-end">
