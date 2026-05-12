@@ -23,7 +23,7 @@ export function About() {
             }`}
           >
             <img
-              src="/mini.jpg"
+              src="/mine.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />
