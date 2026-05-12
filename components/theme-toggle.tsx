@@ -8,30 +8,34 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false)
   const [mounted, setMounted] = useState(false)
 
+  // Initial Theme Setup
   useEffect(() => {
     setMounted(true)
     const savedTheme = localStorage.getItem("theme")
     const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
     const shouldBeDark = savedTheme === "dark" || (!savedTheme && systemPrefersDark)
 
-    console.log("[v0] Theme initialization - saved:", savedTheme, "system:", systemPrefersDark, "final:", shouldBeDark)
-
     setIsDark(shouldBeDark)
-    // Apply theme immediately to prevent flash
     document.documentElement.classList.toggle("dark", shouldBeDark)
   }, [])
 
+  // Handle Theme Persistence
   useEffect(() => {
     if (!mounted) return
 
-    console.log("[v0] Theme changed to:", isDark ? "dark" : "light")
-    localStorage.setItem("theme", isDark ? "dark" : "light")
-    document.documentElement.classList.toggle("dark", isDark)
+    if (isDark) {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    }
   }, [isDark, mounted])
 
+  // Prevent Hydration Flash: Render a skeleton or empty button until mounted
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="relative overflow-hidden">
+      <Button variant="ghost" size="icon" className="w-9 h-9 opacity-0">
         <Sun className="h-4 w-4" />
       </Button>
     )
@@ -42,13 +46,21 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setIsDark(!isDark)}
-      className="relative overflow-hidden group hover:bg-primary/10 transition-all duration-300"
+      className="relative w-9 h-9 flex items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
     >
-      <Sun className={`h-4 w-4 transition-all duration-500 ${isDark ? "rotate-90 scale-0" : "rotate-0 scale-100"}`} />
-      <Moon
-        className={`absolute h-4 w-4 transition-all duration-500 ${isDark ? "rotate-0 scale-100" : "-rotate-90 scale-0"}`}
-      />
+      <div className="relative h-4 w-4 flex items-center justify-center">
+        <Sun
+          className={`h-full w-full absolute transition-all duration-500 ease-in-out ${
+            isDark ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+          } text-amber-500`}
+        />
+        <Moon
+          className={`h-full w-full absolute transition-all duration-500 ease-in-out ${
+            isDark ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
+          } text-blue-400`}
+        />
+      </div>
       <span className="sr-only">Toggle theme</span>
     </Button>
   )
-} 
+}
